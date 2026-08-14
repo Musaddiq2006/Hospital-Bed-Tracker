@@ -11,7 +11,7 @@ public static Connection connectDB() throws SQLException {
    
     String url = "jdbc:mysql://localhost:3306/hbms_project";
     String user = "root";
-    String pass = "SMAhmed160424733468"; 
+    String pass = "your_password"; 
     return DriverManager.getConnection(url, user, pass);
 }
 public static void updateBedCount(String type) {
