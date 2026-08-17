@@ -57,8 +57,9 @@ INSERT INTO rooms (room_type, total_beds, vacant_beds) VALUES
 ('MATERNITY', 20, 20),
 ('SURGERY', 10, 10)
 ON DUPLICATE KEY UPDATE total_beds = VALUES(total_beds), vacant_beds = VALUES(vacant_beds);
+
 ```json
-// 2. Link the JDBC Driver in VS Code (.vscode/settings.json)
+-- 2. Link the JDBC Driver in VS Code (.vscode/settings.json)
 {
     "java.project.referencedLibraries": [
         "C:/mysql-connector-j-26.7.0.jar"
@@ -69,3 +70,27 @@ javac -cp "C:\mysql-connector-j-26.7.0.jar;." *.java
 
 # Run the main program
 java -cp "C:\mysql-connector-j-26.7.0.jar;." HBMSmain
+
+Variable  Type	        Description	    Default
+DB_USER	String	MySQL database username	root
+DB_PASS	String	MySQL database password	None
+DB_URL	String	Connection endpoint	jdbc:mysql://127.0.0.1:3
+
+##Contributing
+Fork the Repository
+
+Create your Feature Branch (git checkout -b feature/new-feature)
+
+Commit your Changes (git commit -m 'Add new feature')
+
+Push to the Branch (git push origin feature/new-feature)
+
+Open a Pull Request
+
+##License
+Distributed under the MIT License. See LICENSE for details.
+
+##Contact
+Musaddiq Ahmed - GitHub Profile
+
+Project Link: https://github.com/Musaddiq2006/Hospital-Bed-Tracker
