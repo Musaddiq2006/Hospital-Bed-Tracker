@@ -57,15 +57,15 @@ INSERT INTO rooms (room_type, total_beds, vacant_beds) VALUES
 ('MATERNITY', 20, 20),
 ('SURGERY', 10, 10)
 ON DUPLICATE KEY UPDATE total_beds = VALUES(total_beds), vacant_beds = VALUES(vacant_beds);
-JSON// 2. Link the JDBC Driver in VS Code (.vscode/settings.json)
+```json
+// 2. Link the JDBC Driver in VS Code (.vscode/settings.json)
 {
     "java.project.referencedLibraries": [
         "C:/mysql-connector-j-26.7.0.jar"
     ]
 }
-UsageProvide clear examples of how to compile and run the project.PowerShell# Compile all Java files in the current folder
+# Compile all Java files with the MySQL JDBC Driver
 javac -cp "C:\mysql-connector-j-26.7.0.jar;." *.java
 
-# Start the application main interface
+# Run the main program
 java -cp "C:\mysql-connector-j-26.7.0.jar;." HBMSmain
-ConfigurationEnvironment variables used to establish database connections.VariableTypeDescriptionDefaultDB_USERStringMySQL database usernamerootDB_PASSStringMySQL database passwordNoneDB_URLStringJDBC connection string endpointjdbc:mysql://127.0.0.1:3306/hbms_projectContributingGuidelines for how people can help improve the project.Fork the ProjectCreate your Feature Branch (git checkout -b feature/bed-analytics)Commit your Changes (git commit -m 'Add bed analytics display')Push to the Branch (git push origin feature/bed-analytics)Open a Pull RequestLicenseDistributed under the MIT License. See LICENSE for more information.ContactMusaddiq Ahmed - GitHub ProfileProject Link: https://github.com/Musaddiq2006/Hospital-Bed-Tracker
